@@ -1,26 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --color-bg-main: #0c0c0d;
+  --color-bg-card: #111113;
+  --color-bg-stripe: #141416;
+  --color-bg-stripe-alt: #18181b;
+  --color-border-line: #1c1c1f;
+  --color-border-card: #1f1f23;
+  --color-border-tag: #232327;
+  --color-border-btn: #2a2a2e;
+  --color-border-card-hover: #3a3a40;
+  --color-content-primary: #ececec;
+  --color-content-stack: #c8c8cd;
+  --color-content-bio: #b4b4b9;
+  --color-content-exp: #a2a2a8;
+  --color-content-nav: #8b8b90;
+  --color-content-muted: #6b6b71;
+  --color-github-0: #161618;
+  --color-github-1: oklch(0.38 0.08 150);
+  --color-github-2: oklch(0.50 0.11 150);
+  --color-github-3: oklch(0.63 0.14 150);
+  --color-github-4: oklch(0.78 0.16 150);
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+body::selection {
+  background-color: white;
+  color: black;
 }
