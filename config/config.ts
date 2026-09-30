@@ -65,7 +65,7 @@ const Config: IConfig = {
             title: "Moja strona",
             description: "Moja strona portfolio, którą właśnie oglądasz",
             stack: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-            githubUrl: "https://github.com/jhnlol/personal-page",
+            githubUrl: "https://github.com/jhnlol/personal",
             liveUrl: "https://jhnlol.pl",
             featured: true
         },
