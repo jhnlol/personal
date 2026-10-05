@@ -31,6 +31,11 @@ export interface ISchool {
     description?: string;
 }
 
+export interface ILinks {
+    github: string;
+    email: string;
+}
+
 export interface IEducation {
     schools: ISchool[];
     certificates: ICertificate[];
@@ -40,6 +45,7 @@ export interface IConfig {
     Experience: IExperience[];
     Projects: IProject[];
     Education: IEducation;
+    Links: ILinks;
 }
 const Config: IConfig = {
     Experience: [
@@ -104,6 +110,10 @@ const Config: IConfig = {
                 date: "2026"
             }
         ]
+    },
+    Links: {
+        github: "https://github.com/jhnlol",
+        email: "mailto:jhn@jhnlol.pl"
     }
 };
 
