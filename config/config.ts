@@ -1,3 +1,5 @@
+import { Code, Database, LucideIcon, Server, Wrench } from "lucide-react";
+
 export interface IExperience {
     company: string;
     position: string;
@@ -36,6 +38,12 @@ export interface ILinks {
     email: string;
 }
 
+export interface IStackCategory {
+    name: string;
+    icon: LucideIcon;
+    items: string[];
+}
+
 export interface IEducation {
     schools: ISchool[];
     certificates: ICertificate[];
@@ -43,6 +51,7 @@ export interface IEducation {
 
 export interface IConfig {
     Experience: IExperience[];
+    Stack: IStackCategory[];
     Projects: IProject[];
     Education: IEducation;
     Links: ILinks;
@@ -64,6 +73,28 @@ const Config: IConfig = {
             endDate: "06.2025",
             description: "Tworzyłem oraz rozwijałem istniejące rozwiązania dla serwera na platformie FiveM.",
             stack: ["Lua", "FiveM", "SQL"]
+        }
+    ],
+    Stack: [
+        {
+            name: "Frontend",
+            icon: Code,
+            items: ["TypeScript", "JavaScript", "React", "Next.js", "Tailwind CSS", "HTML", "CSS"]
+        },
+        {
+            name: "Backend",
+            icon: Server,
+            items: [".NET", "C#", "Node.js", "PHP", "Lua"]
+        },
+        {
+            name: "Bazy danych",
+            icon: Database,
+            items: ["SQL", "MySQL"]
+        },
+        {
+            name: "Narzędzia",
+            icon: Wrench,
+            items: ["Git", "GitHub", "WordPress", "Vercel"]
         }
     ],
     Projects: [

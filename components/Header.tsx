@@ -7,6 +7,7 @@ const Header: FC = () => {
 
     const navLinks = [
         { href: "#doswiadczenie", label: "/DOSWIADCZENIE", id: "doswiadczenie" },
+        { href: "#stack", label: "/STACK", id: "stack" },
         { href: "#projekty", label: "/PROJEKTY", id: "projekty" },
         { href: "#edukacja", label: "/EDUKACJA", id: "edukacja" },
     ];

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
+import Stack from "@/components/Stack";
 import { FC } from "react";
 
 const MainPage: FC = () => {
@@ -13,6 +14,7 @@ const MainPage: FC = () => {
       <div className="w-full max-w-4xl flex flex-col justify-start gap-y-5 px-2 md:px-8">
         <Hero />
         <Experience />
+        <Stack />
         <Projects />
         <Education />
         <Footer />
