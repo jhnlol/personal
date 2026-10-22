@@ -1,16 +1,20 @@
 import Config from "@/config/config";
+import { ArrowUpRight } from "lucide-react";
 import { FC } from "react";
+import Reveal from "./Reveal";
 
 const Projects: FC = () => {
     return (
         <section id="projekty" className="py-10 flex flex-col gap-y-6">
-            <h4 className=" text-content-muted font-mono uppercase">Projekty</h4>
+            <Reveal>
+                <h4 className="text-content-muted font-mono uppercase">Projekty</h4>
+            </Reveal>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {Config.Projects?.map((project, index) => (
+                    <Reveal key={index} delay={(index % 2) * 120} className="h-full">
                     <div 
-                        key={index}
-                        className="bg-bg-card border border-border-card hover:border-border-card-hover rounded-xl p-5 flex flex-col justify-between gap-y-4 transition-all duration-300 group"
+                        className="h-full bg-bg-card border border-border-card hover:border-border-card-hover hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(0,0,0,0.8)] rounded-xl p-5 flex flex-col justify-between gap-y-4 transition-all duration-300 group"
                     >
                         <div className="flex flex-col gap-y-2.5">
                             <div className="flex items-center justify-between">
@@ -33,7 +37,7 @@ const Projects: FC = () => {
                                 {project.stack.map((tech, i) => (
                                     <span 
                                         key={i} 
-                                        className="text-xs font-mono text-content-stack bg-bg-stripe border border-border-tag px-2 py-0.5 rounded"
+                                        className="text-xs font-mono text-content-stack bg-bg-stripe border border-border-tag px-2 py-0.5 rounded transition-colors group-hover:border-border-btn"
                                     >
                                         {tech}
                                     </span>
@@ -45,9 +49,9 @@ const Projects: FC = () => {
                                         href={project.githubUrl} 
                                         target="_blank" 
                                         rel="noopener noreferrer"
-                                        className="text-content-nav hover:text-content-primary transition-colors flex items-center gap-x-1"
+                                        className="group/link text-content-nav hover:text-content-primary transition-colors flex items-center gap-x-1"
                                     >
-                                        GitHub 
+                                        GitHub <ArrowUpRight size={14} className="transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                                     </a>
                                 )}
                                 {project.liveUrl && (
@@ -55,14 +59,15 @@ const Projects: FC = () => {
                                         href={project.liveUrl} 
                                         target="_blank" 
                                         rel="noopener noreferrer"
-                                        className="text-content-nav hover:text-content-primary transition-colors flex items-center gap-x-1"
+                                        className="group/link text-content-nav hover:text-content-primary transition-colors flex items-center gap-x-1"
                                     >
-                                        Live Demo 
+                                        Live Demo <ArrowUpRight size={14} className="transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                                     </a>
                                 )}
                             </div>
                         </div>
                     </div>
+                    </Reveal>
                 ))}
             </div>
         </section>

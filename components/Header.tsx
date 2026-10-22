@@ -25,7 +25,7 @@ const Header: FC = () => {
                         <a
                             key={link.id}
                             href={link.href}
-                            className="text-xs font-mono transition-all duration-200 flex items-center gap-x-1.5 py-1 text-content-nav hover:text-content-primary"
+                            className="relative text-xs font-mono transition-colors duration-200 flex items-center gap-x-1.5 py-1 text-content-nav hover:text-content-primary after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-full after:bg-content-primary after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
                         >
                             {link.label}
                         </a>
